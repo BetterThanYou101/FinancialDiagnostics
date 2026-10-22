@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Days_Overdue__c</fullName>
+    <formula>IF(AND(Outstanding_Balance__c &gt; 0, Due_Date__c &lt; TODAY(), NOT(ISPICKVAL(Invoice_Status__c, "Void"))), TODAY() - Due_Date__c, 0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Days Overdue</label>
+    <precision>3</precision>
+    <scale>0</scale>
+    <type>Number</type>
+</CustomField>
