@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Financial_Period__c</fullName>
+    <label>Financial Period</label>
+    <referenceTo>Financial_Period__c</referenceTo>
+    <relationshipLabel>Invoices</relationshipLabel>
+    <relationshipName>Invoices</relationshipName>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

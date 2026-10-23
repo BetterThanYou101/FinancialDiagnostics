@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Outstanding__c</fullName>
+    <label>Total Outstanding</label>
+    <summaryForeignKey>Invoice__c.Financial_Period__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <summarizedField>Invoice__c.Outstanding_Balance__c</summarizedField>
+    <type>Summary</type>
+</CustomField>
