@@ -1,0 +1,6 @@
+[
+{"sobject":"Financial_Period__c","saveRefs":true,"resolveRefs":false,"files":["Financial_Period__c.json"]},
+{"sobject":"FinancialAccount__c","saveRefs":true,"resolveRefs":false,"files":["FinancialAccount__c.json"]},
+{"sobject":"Invoice__c","saveRefs":true,"resolveRefs":true,"files":["Invoice__c.json"]},
+{"sobject":"Payment__c","saveRefs":false,"resolveRefs":true,"files":["Payment__c.json"]}
+]

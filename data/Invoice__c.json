@@ -1,0 +1,8 @@
+{"records":[
+{"attributes":{"type":"Invoice__c","referenceId":"I1"},"FinancialAccount__c":"@A1","Financial_Period__c":"@P1","Invoice_Date__c":"2026-09-05","Due_Date__c":"2026-10-05","Invoice_Status__c":"Paid","Subtotal__c":1000,"Tax_Amount__c":200},
+{"attributes":{"type":"Invoice__c","referenceId":"I2"},"FinancialAccount__c":"@A1","Financial_Period__c":"@P1","Invoice_Date__c":"2026-09-12","Due_Date__c":"2026-10-12","Invoice_Status__c":"Partially Paid","Subtotal__c":500,"Tax_Amount__c":100},
+{"attributes":{"type":"Invoice__c","referenceId":"I3"},"FinancialAccount__c":"@A2","Financial_Period__c":"@P1","Invoice_Date__c":"2026-09-20","Due_Date__c":"2026-10-20","Invoice_Status__c":"Sent","Subtotal__c":2000,"Tax_Amount__c":400},
+{"attributes":{"type":"Invoice__c","referenceId":"I4"},"FinancialAccount__c":"@A2","Financial_Period__c":"@P2","Invoice_Date__c":"2026-10-02","Due_Date__c":"2026-11-01","Invoice_Status__c":"Sent","Subtotal__c":800,"Tax_Amount__c":160},
+{"attributes":{"type":"Invoice__c","referenceId":"I5"},"FinancialAccount__c":"@A3","Financial_Period__c":"@P2","Invoice_Date__c":"2026-10-10","Due_Date__c":"2026-11-09","Invoice_Status__c":"Partially Paid","Subtotal__c":1500,"Tax_Amount__c":300},
+{"attributes":{"type":"Invoice__c","referenceId":"I6"},"FinancialAccount__c":"@A3","Financial_Period__c":"@P2","Invoice_Date__c":"2026-10-15","Due_Date__c":"2026-10-18","Invoice_Status__c":"Paid","Subtotal__c":400,"Tax_Amount__c":80}
+]}

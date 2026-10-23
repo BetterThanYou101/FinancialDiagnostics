@@ -1,0 +1,4 @@
+{"records":[
+{"attributes":{"type":"Financial_Period__c","referenceId":"P1"},"Name":"Sep 2026","Start_Date__c":"2026-09-01","End_Date__c":"2026-09-30"},
+{"attributes":{"type":"Financial_Period__c","referenceId":"P2"},"Name":"Oct 2026","Start_Date__c":"2026-10-01","End_Date__c":"2026-10-31"}
+]}

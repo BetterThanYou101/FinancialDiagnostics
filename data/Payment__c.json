@@ -1,0 +1,9 @@
+{"records":[
+{"attributes":{"type":"Payment__c","referenceId":"Y1"},"Invoice__c":"@I1","Payment_Date__c":"2026-10-04","Payment_Amount__c":1200,"Payment_Method__c":"Bank Transfer","Payment_Status__c":"Completed"},
+{"attributes":{"type":"Payment__c","referenceId":"Y2"},"Invoice__c":"@I2","Payment_Date__c":"2026-10-10","Payment_Amount__c":300,"Payment_Method__c":"Bank Transfer","Payment_Status__c":"Completed"},
+{"attributes":{"type":"Payment__c","referenceId":"Y3"},"Invoice__c":"@I2","Payment_Date__c":"2026-10-20","Payment_Amount__c":100,"Payment_Method__c":"Cheque","Payment_Status__c":"Pending"},
+{"attributes":{"type":"Payment__c","referenceId":"Y4"},"Invoice__c":"@I4","Payment_Date__c":"2026-10-12","Payment_Amount__c":960,"Payment_Method__c":"Card","Payment_Status__c":"Failed"},
+{"attributes":{"type":"Payment__c","referenceId":"Y5"},"Invoice__c":"@I5","Payment_Date__c":"2026-10-20","Payment_Amount__c":600,"Payment_Method__c":"Bank Transfer","Payment_Status__c":"Completed"},
+{"attributes":{"type":"Payment__c","referenceId":"Y6"},"Invoice__c":"@I5","Payment_Date__c":"2026-10-21","Payment_Amount__c":200,"Payment_Method__c":"Bank Transfer","Payment_Status__c":"Refunded"},
+{"attributes":{"type":"Payment__c","referenceId":"Y7"},"Invoice__c":"@I6","Payment_Date__c":"2026-10-17","Payment_Amount__c":480,"Payment_Method__c":"Cash","Payment_Status__c":"Completed"}
+]}

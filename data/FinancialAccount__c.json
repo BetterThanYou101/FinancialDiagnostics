@@ -1,0 +1,5 @@
+{"records":[
+{"attributes":{"type":"FinancialAccount__c","referenceId":"A1"},"Company_Name__c":"Atlas Trading","Account_Type__c":"Business","Payment_Terms__c":"Net 30","Account_Status__c":"Active","Credit_Limit__c":10000,"Billing_Country__c":"Morocco"},
+{"attributes":{"type":"FinancialAccount__c","referenceId":"A2"},"Company_Name__c":"Sahara Foods","Account_Type__c":"Business","Payment_Terms__c":"Net 30","Account_Status__c":"Active","Credit_Limit__c":15000,"Billing_Country__c":"Morocco"},
+{"attributes":{"type":"FinancialAccount__c","referenceId":"A3"},"Company_Name__c":"Medina Supplies","Account_Type__c":"Business","Payment_Terms__c":"Net 30","Account_Status__c":"Active","Credit_Limit__c":8000,"Billing_Country__c":"Morocco"}
+]}
