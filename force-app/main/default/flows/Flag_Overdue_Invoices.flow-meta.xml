@@ -5,17 +5,15 @@
     <decisions>
         <name>Is_Overdue</name>
         <label>Is Overdue</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>END_ELEMENT_1</targetReference>
+            <targetReference>end_of_loop</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
-            <name>Yes</name>
+            <name>Overdue_Invoice</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.Days_Overdue__c</leftValueReference>
+                <leftValueReference>loop_Overdue_Invoices.Days_Overdue__c</leftValueReference>
                 <operator>GreaterThan</operator>
                 <rightValue>
                     <numberValue>0.0</numberValue>
@@ -24,74 +22,16 @@
             <connector>
                 <targetReference>Mark_Overdue</targetReference>
             </connector>
-            <label>Yes</label>
+            <label>Yes - mark overdue</label>
         </rules>
     </decisions>
-    <ends>
-        <name>END_ELEMENT_1</name>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-    </ends>
     <environments>Default</environments>
     <interviewLabel>Flag Overdue Invoices {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Flag Overdue Invoices</label>
-    <processMetadataValues>
-        <name>BuilderType</name>
-        <value>
-            <stringValue>LightningFlowBuilder</stringValue>
-        </value>
-    </processMetadataValues>
-    <processMetadataValues>
-        <name>CanvasMode</name>
-        <value>
-            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
-        </value>
-    </processMetadataValues>
-    <processMetadataValues>
-        <name>OriginBuilderType</name>
-        <value>
-            <stringValue>LightningFlowBuilder</stringValue>
-        </value>
-    </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
-    <recordUpdates>
-        <name>Mark_Overdue</name>
-        <label>Mark Overdue</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <connector>
-            <targetReference>END_ELEMENT_1</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>$Record.Id</elementReference>
-            </value>
-        </filters>
-        <inputAssignments>
-            <field>Invoice_Status__c</field>
-            <value>
-                <stringValue>Overdue</stringValue>
-            </value>
-        </inputAssignments>
-        <object>Invoice__c</object>
-    </recordUpdates>
-    <start>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <connector>
-            <targetReference>Is_Overdue</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Invoice_Status__c</field>
-            <operator>NotEqualTo</operator>
-            <value>
-                <stringValue>Overdue</stringValue>
-            </value>
-        </filters>
+    <recordLookups>
+        <name>get_open_invoices</name>
+        <label>Get open invoices</label>
         <filters>
             <field>Invoice_Status__c</field>
             <operator>NotEqualTo</operator>
@@ -103,16 +43,62 @@
             <field>Invoice_Status__c</field>
             <operator>NotEqualTo</operator>
             <value>
+                <stringValue>Draft</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Invoice_Status__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
                 <stringValue>Void</stringValue>
             </value>
         </filters>
+        <filters>
+            <field>Invoice_Status__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Overdue</stringValue>
+            </value>
+        </filters>
         <object>Invoice__c</object>
+        <outputCollection>get_open_invoices</outputCollection>
+        <outputReference>get_open_invoices</outputReference>
+    </recordLookups>
+    <recordUpdates>
+        <name>Mark_Overdue</name>
+        <label>Mark Overdue</label>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>loop_Overdue_Invoices.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Invoice_Status__c</field>
+            <value>
+                <stringValue>Overdue</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Invoice__c</object>
+    </recordUpdates>
+    <start>
+        <object>Invoice__c</object>
+        <triggerType>Scheduled</triggerType>
         <schedule>
             <frequency>Daily</frequency>
             <startDate>2026-10-24</startDate>
-            <startTime>12:00:00.000Z</startTime>
+            <startTime>01:00:00.000Z</startTime>
         </schedule>
-        <triggerType>Scheduled</triggerType>
     </start>
     <status>Active</status>
+    <variables>
+        <name>get_open_invoices</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Invoice__c</objectType>
+    </variables>
 </Flow>

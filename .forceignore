@@ -12,3 +12,4 @@ package.xml
 **/__tests__/**
 
 node_modules/
+**/sfdc_default_*.flow-meta.xml
